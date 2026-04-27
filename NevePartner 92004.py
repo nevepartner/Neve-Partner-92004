@@ -14,10 +14,10 @@ multiQandA = {"How many Olympic Games has she competed in?\n1. 1\n2. 2\n3. 3\n4.
               "How many Olympic bronze medals has she won?\n1. 1\n2. 2\n3. 3\n4. 4\n" : 1}
 #Asking the user for the multi choice answers
 for question, answer in multiQandA.items():
-    answer = input(question)
     #Seeing if answer is valid
     valid = False
     while valid == False:
+        answer = input(question)
         try:
             int(answer)
             if answer < 0:
@@ -27,7 +27,7 @@ for question, answer in multiQandA.items():
             else:
                 valid = True
                 print('answer is valid')
-        except:
+        except ValueError:
            print('Please enter an integer')
 
 # #Creating a dictionary with user input questions and answers
