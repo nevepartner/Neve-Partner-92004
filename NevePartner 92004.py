@@ -12,22 +12,23 @@ multiQandA = {"How many Olympic Games has she competed in?\n1. 1\n2. 2\n3. 3\n4.
               "What sport does Lisa Carrington compete in?\n1. Rowing\n2. Canoeing\n3. Kayaking\n4. Whitewater rafting\n" : 2,
               "When did she obtain the record for world's fastest K1 200m?\n1. 2010\n2.2012\n3. 2014\n4. 2016\n" : 3,
               "How many Olympic bronze medals has she won?\n1. 1\n2. 2\n3. 3\n4. 4\n" : 1}
+
 #Asking the user for the multi choice answers
 for question, answer in multiQandA.items():
     #Seeing if answer is valid
     valid = False
     while valid == False:
-        answer = input(question)
+        multi_answer = input(question)
         try:
-            int(answer)
-            if answer < 0:
+            multi_answer = int(multi_answer)
+            if multi_answer < 1:
                 print('Please enter a number that corresponds to an answer')
-            elif answer > 4:
+            elif multi_answer > 4:
                 print('Please enter a number that corresponds to an answer')
             else:
                 valid = True
                 print('answer is valid')
-        except ValueError:
+        except:
            print('Please enter an integer')
 
 # #Creating a dictionary with user input questions and answers
