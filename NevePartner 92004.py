@@ -18,8 +18,8 @@ multiQandA = {"\nHow many Olympic Games has she competed in?\n1. 1\n2. 2\n3. 3\n
 
 #Asking the user for the multi choice answers
 for question, answer in multiQandA.items():
-    #Seeing if answer is valid
     print(question)
+    #Seeing if answer is valid
     valid = False
     while valid == False:
         multi_answer = input('Your answer: ')
@@ -41,8 +41,16 @@ for question, answer in multiQandA.items():
         print(f'Incorrect. The correct answer was {answer}.')
 
 # #Creating a dictionary with user input questions and answers
-questions_answers = {"What year was Lisa Carrington born?" : 1989,
-                     "How many Olympic medals has she won?" : 9,
-                     "What city was she born in?" : "Tauranga",
-                     "How many World Championship gold medals has she won?" : 15,
-                     "She is nicknamed the '____ in the boat'" : "GOAT"}
+user_inputQandA = {"\nWhat year was Lisa Carrington born?" : 1989,
+                   "\nHow many Olympic medals has she won?" : 9,
+                   "\nWhat city was she born in?" : "Tauranga",
+                   "\nHow many World Championship gold medals has she won?" : 15,
+                   "\nShe is nicknamed the '____ in the boat'" : "GOAT"}
+
+#Asking the user for the user for the user input answers
+for question, answer in user_inputQandA.items():
+    print(question)
+    #Seeing if answer is valid
+    valid = False
+    while valid == False:
+        print('gh')
