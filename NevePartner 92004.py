@@ -1,5 +1,5 @@
-'''Code gives a quiz on Lisa Carrington, one of New Zealand's sporting stars. By Neve Partner.
-Created on 22/04/2026'''
+'''Code gives a quiz on Lisa Carrington, one of New Zealand's sporting stars.
+   By Neve Partner. Created on 22/04/2026'''
 
 #Introducing the audience to the quiz
 print("This is a quiz on Lisa Carrington, one of New Zealand's greatest sporting stars.")
@@ -50,7 +50,31 @@ user_inputQandA = {"\nWhat year was Lisa Carrington born?" : 1989,
 #Asking the user for the user for the user input answers
 for question, answer in user_inputQandA.items():
     print(question)
-    #Seeing if answer is valid
+    #Seeing if the correct answer is an integer or a string so I can better test
+    #for invalid user input
+    try:
+        answer = int(answer)
+        type_of_data = 'int'
+    except:
+        type_of_data = 'str'
+    #Testing if the user input is valid
     valid = False
+    user_answer = input('Your answer: ')
     while valid == False:
-        print('gh')
+        if type_of_data == 'int':
+            try:
+                user_answer = int(user_answer)
+                valid = True
+            except:
+                print('Please enter a number')
+        if type_of_data == 'str':
+            try:
+                user_answer = str(user_answer)
+                valid = True
+            except:
+                print('Please enter a word')
+    if user_answer == answer:
+        print('Correct')
+        correct_answers = correct_answers + 1
+    else:
+        print(f'Incorrect. The correct answer was {answer}')
