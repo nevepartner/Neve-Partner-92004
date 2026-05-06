@@ -14,7 +14,7 @@ max_value = 4
 print("Please input the number corresponding to the answer you think is correct.")
 questions_and_answers = {"\nHow many Olympic Games has she competed in?\n1. 1\n2. 2\n3. 3\n"
               "4. 4" : 4,
-              "\nWhich of these places did Lisa Carrington not win an Olympic" 
+              "\nWhich of these places did Lisa Carrington not win an Olympic " 
               "medal at?\n1. Tokyo\n2. Sydney\n3. Rio\n4. Paris" : 2,
               "\nWhat sport does Lisa Carrington compete in?\n1. Rowing\n2. "
               "Canoeing\n3. Kayaking\n4. Whitewater rafting" : 2,
@@ -33,10 +33,10 @@ questions_and_answers = {"\nHow many Olympic Games has she competed in?\n1. 1\n2
               "\n When did she win her first Olympic gold medal?\n1. 2010\n2. 2012\n"
               "3. 2014\n4. 2016" : 2}
 
-#Asking the user for the multi choice answers
+#Asking the user for their answers
 for question, answer in questions_and_answers.items():
     print(question)
-    #Seeing if answer is valid
+    #Seeing if answer is invalid or boundary
     valid = False
     while valid == False:
         user_answer = input('Your answer: ')
@@ -57,13 +57,13 @@ for question, answer in questions_and_answers.items():
     else:
         print(f'Incorrect. The correct answer was {answer}.')
 
-#Calculating users final score. I multiplied the score by 10 to get a percentage.
+#Calculating users final score. I multiplied the score by 100 to get a percentage.
 percentage_correct = correct_answers / total_questions
-percentage_correct = percentage_correct * 100
+percentage_correct = int(percentage_correct * 100)
 
 #Printing a message to show user how they did
 if correct_answers < 5:
-    print(f"\nWell done! You got {correct_answers} correct. That's {percentage_correct}%")
+    print(f"\nGood effort! You got {correct_answers} correct. That's {percentage_correct}%")
 elif correct_answers < 8:
     print(f"\nGreat job! You got {correct_answers} correct. That's {percentage_correct}%")
 else:
