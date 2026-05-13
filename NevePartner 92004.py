@@ -29,7 +29,7 @@ questions_and_answers = {"\nHow many Olympic Games has she competed in?\n1. 1\n2
                          "4. Christchurch" : 2,
                          "\nHow many World Championship gold medals has she won?\n1. 5\n"
                          "2. 10\n3. 15\n4. 20" : 3,
-                         "\n When did she win her first Olympic gold medal?\n1. 2010\n2. 2012\n"
+                         "\nWhen did she win her first Olympic gold medal?\n1. 2010\n2. 2012\n"
                          "3. 2014\n4. 2016" : 2}
 
 #Asking the user for their answers
