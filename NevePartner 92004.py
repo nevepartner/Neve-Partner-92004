@@ -9,6 +9,8 @@ correct_answers = 0
 total_questions = 10
 minimum_value = 1
 max_value = 4
+upper_boundary = 80
+lower_boundary = 50
 
 #Setting up a dictionary with the questions and answers
 questions_and_answers = {"\nHow many Olympic Games has she competed in?\n1. 1\n2. 2\n3. 3\n"
@@ -59,9 +61,9 @@ for question, answer in questions_and_answers.items():
 #Calculating users final score and letting them know how they did.
 percentage_correct = correct_answers / total_questions
 percentage_correct = int(percentage_correct * 100)
-if percentage_correct < 50:
+if percentage_correct < lower_boundary:
     print(f"\nGood effort! You got {correct_answers} correct. That's {percentage_correct}%")
-elif percentage_correct < 80:
+elif percentage_correct < upper_boundary:
     print(f"\nGreat job! You got {correct_answers} correct. That's {percentage_correct}%")
 else:
     print(f"\nExcellent work! You got {correct_answers} correct. That's {percentage_correct}%")
